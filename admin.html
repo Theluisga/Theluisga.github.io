@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portafolio del Aprendiz</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.ico"/>
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/dashboard/logo.jpg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/dashboard/logo.jpg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/faces/luis.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Ajustes
+              </a>
+              <a class="dropdown-item" href="index.html">
+                <i class="ti-power-off text-primary" act></i>
+                Cerrar sesión
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">PIELES DE LA BARRA LATERAL</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Blanco</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Oscuro</div>
+          <p class="settings-heading mt-2">PIELES DE CABECERA</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">Tareas</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Agregar tarea">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Agregar</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Reunión de revisión del equipo a las 15:00
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepárate para la presentación
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolver todos los tickets de baja prioridad que vencen hoy
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Programar reunión para la próxima semana
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Revision del proyecto
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Portafolio Aprendiz</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">HTML5</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="activi/html5/CUADRO.docx" target="_blank">Actividad#1</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/html5/Estructura HTML5.docx" target="_blank">Actividad#2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.youtube.com/watch?v=-c8a0r-0pq4&feature=youtu.be" target="_blank">Actividad#3</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad4/index2.0.html" target="_blank">Actividad#4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad5/Actividad5.html" target="_blank">Actividad#5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad6/Actividad6.html" target="_blank">Actividad#6</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad7/Actividad7.html" target="_blank">Actividad#7</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad8/actividad8.html" target="_blank">Actividad#8</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad9/Actividad.html" target="_blank">Actividad#9</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/html5/actividad10/Actividad10.html" target="_blank">Actividad#10</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">CSS3</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/1/blue%20modern%20mind%20map%20graphic%20(1).jpg" target="_blank">Actividad#1</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/2/index.html" target="_blank">Actividad#2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/3/index.html" target="_blank">Actividad#3</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/4/index.html" target="_blank">Actividad#4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/5/index.html" target="_blank">Actividad#5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/6/index.html" target="_blank">Actividad#6</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/7/index.html" target="_blank">Actividad#7</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/css3/8/index.html" target="_blank">Actividad#8</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Javascript 6</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="#">Actividad#1</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/Actividad2/ejercicio3.html" target="_blank">Actividad#2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/3/index.html" target="_blank">Actividad#3</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/4/index.html" target="_blank">Actividad#4</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/5/index.html" target="_blank">Actividad#5</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/6/index.html" target="_blank">Actividad#6</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/7.3/index.html" target="_blank">Actividad#7</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/proyecto8/index.html" target="_blank">Actividad#8</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://theluisga.github.io/js2/9/index.html" target="_blank">Actividad#9</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Python</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="activi/python/Python.docx">Actividad#1</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Extructura Secuencial.rar">Actividad#2</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Estructura Condicional.rar">Actividad#3</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad4.rar">Actividad#4</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/for.rar">Actividad#5</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/while.rar">Actividad#6</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/ejercicios (1).rar">Actividad#7</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad8.docx">Actividad#8</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad9.rar">Actividad#9</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad10.rar">Actividad#10</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad11.rar">Actividad#11</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/Actividad12.rar">Actividad#12</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/actividad13.rar">Actividad#13</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/sin parametros.rar">Actividad#14</a></li>
+                <li class="nav-item"><a class="nav-link" href="activi/python/parametros.rar">Actividad#15</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/documentation/documentation.html">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Bienvenido, estamos en linea!</h3>
+                  <h6 class="font-weight-normal mb-0">Analisis y Desarrollo de Sistemas de Informacion <span class="text-primary">Sena Regional Sucre</span></h6>
+                </div>
+                <div class="col-12 col-xl-4">
+                 <div class="justify-content-end d-flex">
+                  <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                    
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people mt-auto">
+                  <img src="images/dashboard/desarrollo-web.png" alt="people" height="380px">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>28<sup>C</sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal">Sincelejo</h4>
+                        <h6 class="font-weight-normal">Colombia</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body">
+                      <p class="mb-4">HTML5</p>
+                      <p class="fs-30 mb-2">10 actividades</p>
+                      <p>Desde 18 jul. 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-dark-blue">
+                    <div class="card-body">
+                      <p class="mb-4">CCS3</p>
+                      <p class="fs-30 mb-2">8 actividades</p>
+                      <p>Desde 18 agos. 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-0 stretch-card transparent">
+                  <div class="card card-light-blue">
+                    <div class="card-body">
+                      <p class="mb-4">Javascript</p>
+                      <p class="fs-30 mb-2">9 actividades</p>
+                      <p>Desde 28 agos. 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 stretch-card transparent">
+                  <div class="card card-light-danger">
+                    <div class="card-body">
+                      <p class="mb-4">Python</p>
+                      <p class="fs-30 mb-2">15 actividades</p>
+                      <p>Desde 4 oct. 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+          <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title mb-0">Tabla de Proyectos</p>
+                  <div class="table-responsive">
+                    <table class="table table-striped table-borderless">
+                      <thead>
+                        <tr>
+                          <th>Lenguajes</th>
+                          <th>N. Actividades</th>
+                          <th>Fecha</th>
+                          <th>Estado</th>
+                        </tr>  
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>HTLM5</td>
+                          <td class="font-weight-bold">10</td>
+                          <td>18 jul 2022</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Completo</div></td>
+                        </tr>
+                        <tr>
+                          <td>css</td>
+                          <td class="font-weight-bold">8</td>
+                          <td>18 agos 2022</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Completo</div></td>
+                        </tr>
+                        <tr>
+                          <td>Javascript</td>
+                          <td class="font-weight-bold">9</td>
+                          <td>28 agos 2022</td>
+                          <td class="font-weight-medium"><div class="badge badge-success">Completo</div></td>
+                        </tr>
+                        <tr>
+                          <td>Python</td>
+                          <td class="font-weight-bold">15</td>
+                          <td>4 oct 2022</td>
+                          <td class="font-weight-medium"><div class="badge badge-warning">Proceso</div></td>
+                        </tr>
+                        <tr>
+                          <td>Bootstrap</td>
+                          <td class="font-weight-bold">--</td>
+                          <td>-- -- ----</td>
+                          <td class="font-weight-medium"><div class="badge badge-danger">Pendiente</div></td>
+                        </tr>
+                        <tr>
+                          <td>PHP</td>
+                          <td class="font-weight-bold">--</td>
+                          <td>-- -- ----</td>
+                          <td class="font-weight-medium"><div class="badge badge-danger">Pendiente</div></td>
+                        </tr>
+                        <tr>
+                          <td>SQL</td>
+                          <td class="font-weight-bold">--</td>
+                          <td>-- -- ----</td>
+                          <td class="font-weight-medium"><div class="badge badge-danger">Pendiente</div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 grid-margin stretch-card">
+							<img src="images/dashboard/hola.png" height="550px">
+            </div>
+          </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. <a href="https://theluisga.github.io/" target="_blank">Apre. Luis Arroyo</a> Aprendiz sena</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">SENA - CITS <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Programa <a href="https://www.themewagon.com/" target="_blank">ADSI</a></span> 
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
