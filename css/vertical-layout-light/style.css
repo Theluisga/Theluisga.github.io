@@ -21971,17 +21971,6 @@ code {
 }
 
 /* Cards */
-.card {
-  box-shadow: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  transition: background 0.25s ease;
-  -webkit-transition: background 0.25s ease;
-  -moz-transition: background 0.25s ease;
-  -ms-transition: background 0.25s ease;
-  border: none;
-}
 
 .card.tale-bg {
   background: #DAE7FF;
@@ -26447,7 +26436,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -26475,7 +26463,6 @@ table.dataTable tbody td.select-checkbox:after {
   -moz-box-shadow: 3px 3px 6px 0 rgba(147, 127, 201, 0.43);
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -26505,7 +26492,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -26528,7 +26514,6 @@ table.dataTable tbody td.select-checkbox:after {
   border-radius: 4px;
   display: block;
   margin: auto;
-  vertical-align: middle;
   position: absolute;
   top: 6px;
   z-index: -1;
@@ -27930,7 +27915,6 @@ div.tagsinput span.tag a {
   background: rgba(0, 0, 0, 0.8);
   width: 100px;
   margin-left: -50px;
-  -webkit-transition: 0.1s left, 0.1s top;
 }
 
 .wysi-editor .wrap {
@@ -28381,7 +28365,7 @@ div.tagsinput span.tag a {
 }
 
 .auth .brand-logo img {
-  width: 150px;
+  width: 100px;
 }
 
 .auth form .form-group {
@@ -30590,6 +30574,10 @@ div.tagsinput span.tag a {
   #settings-trigger {
     display: none;
   }
+}
+
+.icon-prueba:before{
+  content: "\F10A";
 }
 
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */
